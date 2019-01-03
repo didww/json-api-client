@@ -34,7 +34,7 @@ class HasOneRelation extends AbstractOneRelation
         $result = parent::associate($included);
 
         // Set the $relation.'_id' on the parent
-        $this->parentItem->setAttribute($this->type.'_id', $this->getId());
+        //$this->parentItem->setAttribute($this->type.'_id', $this->getId());
 
         return $result;
     }
@@ -47,7 +47,7 @@ class HasOneRelation extends AbstractOneRelation
         $result = parent::dissociate();
 
         // Remove the $relation.'_id' on the parent
-        $this->parentItem->setAttribute($this->type.'_id', null);
+        //$this->parentItem->setAttribute($this->type.'_id', null);
 
         return $result;
     }
